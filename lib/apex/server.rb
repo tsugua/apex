@@ -86,7 +86,7 @@ module Apex
 
     def add_static_handler
       public_path = NSBundle.mainBundle.pathForResource("assets", ofType:nil)
-      self.server.addGETHandlerForBasePath("/", directoryPath:public_path, indexFilename:nil, cacheAge:3600, allowRangeRequests:false)
+      self.server.addGETHandlerForBasePath("/", directoryPath:public_path, indexFilename:nil, cacheAge:3600, allowRangeRequests:true)
     end
 
     def start
